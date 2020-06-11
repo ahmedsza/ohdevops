@@ -9,7 +9,7 @@ endpoint='https://openhackn82382w0poi-staging.azurewebsites.net/api/healthcheck/
 
 healthcheck() {
     declare url=$1
-    result=$(curl -i $url 2>/dev/null | grep HTTP/1.1)
+    result=$(curl -i $url 2>/dev/null | grep HTTP/2)
     echo $result
 }
 

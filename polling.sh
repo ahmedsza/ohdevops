@@ -44,7 +44,7 @@ do
   fi
 done
 
-if [ $status200count -gt 5 ]; then
+if [ $status200count -gt 1 ]; then
   echo "API UP"
   # APISTATUS is a pipeline variable
   APISTATUS="Up"

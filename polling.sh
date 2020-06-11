@@ -5,7 +5,7 @@ declare hasUrl=""
 declare endpoint
 declare -i status200count=0
 
-endpoint="https://openhackn82382w0poi-staging.azurewebsites.net/api/healthcheck/poi"
+endpoint='https://openhackn82382w0poi-staging.azurewebsites.net/api/healthcheck/poi'
 
 healthcheck() {
     declare url=$1
@@ -15,7 +15,7 @@ healthcheck() {
 
 for i in {1..12}
 do
-  result=`healthcheck $endpoint` 
+  result='healthcheck $endpoint' 
   declare status
   if [[ -z $result ]]; then 
     status="N/A"

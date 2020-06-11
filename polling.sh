@@ -52,6 +52,6 @@ if [ $status200count -gt 5 ]; then
 else
   echo "API DOWN"
   APISTATUS="Down"
-  echo ::set-env name=APISTATUS::false
-  exit 1;
+  echo ::set-env name=APISTATUS::true
+ # exit 1;
 fi

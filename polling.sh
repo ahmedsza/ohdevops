@@ -21,7 +21,7 @@ do
     status="N/A"
     echo "Site not found"
   else
-    status=${result:9:3}
+    status=${result:7:3}
     timestamp=$(date "+%Y%m%d-%H%M%S")
     if [[ -z $hasUrl ]]; then
       echo "$timestamp | $status "

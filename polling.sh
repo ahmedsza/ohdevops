@@ -14,7 +14,7 @@ healthcheck() {
     echo $result
 }
 
-for i in {1..2}
+for i in {1..12}
 do
  # echo 'in check'
  # result='healthcheck $endpoint' 
@@ -44,7 +44,7 @@ do
   fi
 done
 
-if [ $status200count -gt 1 ]; then
+if [ $status200count -gt 5 ]; then
   echo "API UP"
   # APISTATUS is a pipeline variable
   APISTATUS="Up"
@@ -52,6 +52,6 @@ if [ $status200count -gt 1 ]; then
 else
   echo "API DOWN"
   APISTATUS="Down"
-  echo ::set-env name=APISTATUS::true
- # exit 1;
+  echo ::set-env name=APISTATUS::false
+  exit 1;
 fi
